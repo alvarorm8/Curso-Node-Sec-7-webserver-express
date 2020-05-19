@@ -7,7 +7,30 @@ require('./hbs/helpers');
 Variable para el puerto: si se corre en local no existe, por lo que se pone 3000
 Inicio: variable start en package.json para que Heroku sepa iniciar la aplicación.
 Para iniciarla, se pone en la consola npm start
-Nodemon: variable en el package.json. Para iniciarla npm run nodemon*/
+Nodemon: variable en el package.json. Para iniciarla npm run nodemon
+
+Heroku trabaja en base a git, por lo que hay que crear el .gitignore,
+se hace git init, git status para ver que queda por hacer,
+git add ., git commit -m "Primer commit".
+
+Tras esto es necesario solo la primera vez en un PC hacer
+el comando heroku login, de manera que pide el correo y la 
+contraseña.
+
+Tras esto, podemos ir a la página de heroku y en la pestaña
+Deploy del proyecto concreto, se hace heroku git:remote -a alvaro-webpage-node
+y seguidamente, git push heroku master. 
+
+Luego se instala todo lo necesario y me da un enlace que puedo compartir con gente
+para que acceda a la aplicación: https://alvaro-webpage-node.herokuapp.com/.accordion
+
+También, se puede hacer con heroku open.accordion
+
+Si modifico la programación, se hace de nuevo el git add ., git commit, git push
+
+En la pestaña Deploy de la aplicación en heroku están los comandos
+necesarios para clonar el repositorio, hacer los cambios, etc.
+*/
 const port = process.env.PORT || 3000;
 /*
 Cuando el path sea un /, las peticiones ejecutan
