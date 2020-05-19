@@ -1,0 +1,32 @@
+<!-- Para poner todo esto se pone ! y se pulsa 
+el botón tab 
+Aquí se pone la info que queremos que sea pública-->
+
+{{> header}} <!-- La sintaxis es muy importante-->
+
+{{> navbar}} 
+
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, {{capitalizar nombre}}!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+
+{{> footer}}
+
+<!--El problema ahora es que si queremos poner la 
+página about como esta tenemos que copiar todo el 
+código. Además, si queremos que la página sea
+dinámica, por ejemplo, que se ponga el año 
+automáticamente, es muy complicado, 
+para ello, se usa una librería llamada 
+handlebars. Nosotros no trabajamos directamente
+con ella, si no con npm hbs, para que express
+pueda usar handlebars
+
+Otra cuestión es que si queremos usar este estilo
+para todas las páginas de la web, como la pestaña
+about, se pueden usar parciales, que son bloques de 
+código reutilizables-->
